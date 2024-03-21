@@ -1,8 +1,13 @@
-# Název mého projektu, programu, hry...
+# ČTI!
 
 ## Téma
 
-Tady bude krátký a úderný popis o účelu, významu, funkcionalitě...
+Digitální čtenářský deník. Maturita bude brzy volat a zapisování čtenářského deníku je jedna z mých nejméně oblíbených činností, je to zdlouhavé, minimálně systematické a je to prostě chaos. Nikdo pořádně nevím co na nás čeká a mít jistotu, že jsme se vše "naučili" by ulevilo na duši. Bylo by na místě, aby nám aplikace nějak ulehčila bichlování, takže by bylo možné tvořit s vytvořených čtenářáků quiz...
+
+### potenciální features
+- Odpočet času do maturity, stíhám vše načíst!?
+- Tvorba QUIZU z vypracovaných deníků.
+- Pustupné zapisování (blog?)
 
 ## Odkazy pro vývoj
 
