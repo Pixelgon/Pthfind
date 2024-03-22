@@ -8,6 +8,9 @@ Digitální čtenářský deník. Maturita bude brzy volat a zapisování čten�
 - Odpočet času do maturity, stíhám vše načíst!?
 - Tvorba QUIZU z vypracovaných deníků.
 - Pustupné zapisování (blog?)
+- doplňování informací podle názvu knihy (načítání z externího zdroje)
+    - [Goodreads](https://www.goodreads.com/api)
+    - [Databáze Národní knihovny ČR](https://aleph.nkp.cz/F/?func=file&file_name=find-b&local_base=skc)
 
 ## Odkazy pro vývoj
 
