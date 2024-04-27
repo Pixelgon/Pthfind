@@ -1,43 +1,20 @@
-# ČTI!
+# Pthfind
 
-## Téma
+Projekt je koncipován jako kombinace projektů MPA a WEBu. Tzv. Backend i frontend, ale zde přenechám jen frontend, backend bude k nalezení na [2023-p3a-web-loginproject-Pixelgon](https://github.com/pslib-cz/2023-p3a-web-loginproject-Pixelgon)
 
-Digitální čtenářský deník. Maturita bude brzy volat a zapisování čtenářského deníku je jedna z mých nejméně oblíbených činností, je to zdlouhavé, minimálně systematické a je to prostě chaos. Nikdo pořádně nevím co na nás čeká a mít jistotu, že jsme se vše "naučili" by ulevilo na duši. Bylo by na místě, aby nám aplikace nějak ulehčila bichlování, takže by bylo možné tvořit s vytvořených čtenářáků quiz...
+- lidi stále nepřišli na jednoduché generické řešení CV/vizitek a vetšinou si to tvoří sami ve Wordu nebo jsou na Linkedinu, který stejně nikoho moc nezajímá. V nejlepším případě použijí Europass...
+- hojně se stává, že mají lidi CV přesycené "omáčkou" a fakta se hůře hledají, HR z toho šílí.
+- Tvorba CV bude spočívat na matici 4x* elementů/widgetů, samostatný element by mohl jít přes více sloupců
+- stále si lidi předávají vizitky nebo dávají link na Instagram nebo Linkedin, tohle by mohl být takový minimalistický rozcestník naší digitální identity něco jako Linktree, ale více profi a mířený spíše na pracovní příležitosti a konkrétního člověka
+- \= Minimalistický hostovaný profil
 
-### potenciální features
-- Odpočet času do maturity, stíhám vše načíst!?
-- Tvorba QUIZU z vypracovaných deníků.
-- Pustupné zapisování (blog?)
-- doplňování informací podle názvu knihy (načítání z externího zdroje)
-    - [Goodreads](https://www.goodreads.com/api)
-    - [Databáze Národní knihovny ČR](https://aleph.nkp.cz/F/?func=file&file_name=find-b&local_base=skc)
+# Features
+
+- Pokud si to uživatel povolí, tak bude jeho profil indexovaný a bude moct být nalézt na HP
+    - Vyhledávat půjde podle veškerých atributů
+- Stále bude možné exportovat do vcard (.vcf) nebo pdf
+- Možná načítání dat z ostatních socek, primárně bych použil linkedin nebo Facebook, kvůli početnosti uživatelů
 
 ## Odkazy pro vývoj
 
-Zde budou živé linky na:
-- figma návrh stránek aplikace
-- odkaz na gh-pages projektu
-- odkaz do repozitáře projektu, pokud pracuji v teamu a zde vývoj neprobíhá
-
-### Z čeho čerpat
-
-- interaktivní hra (předělávka "deskovky")
-- mohlo by být použitelné jako solitaire
-- nebo "AI" protihráč
-- inspirovat se můžete na [zatrolených hrách](https://www.zatrolene-hry.cz/katalog-her/?fType=cat&keyword=&theme=-1&category=-1&minlength=-1&maxlength=-1&localization=6%2C+7%2C+8&min_players=1&max_players=1&age=-1)...
-- karetní hry méně typické - např. [Kabo](https://www.zatrolene-hry.cz/spolecenska-hra/kabo-8341/)
-- učitelem oblíbená [Cartagena](https://www.zatrolene-hry.cz/spolecenska-hra/cartagena-422/) stále čeká na remake
-
-### Techniky
-
-- využití localStorage / sessionStorage
-- čtení dat z externího RestAPI (fetch)
-- operace DnD
-- využití react-routeru
-- funkčnost na mobilu (výjimka je předělávka komplexních deskových her)
-
-### Co není obsahem 
-
-- databáze
-- bez vlastních backend service
-- trapné věci: *klasické karetní hry*, *člověče nezlob se*, ...
+- [Figma](https://www.figma.com/file/FNIubqs15CI6uT6EClqgkX/Pthfind?type=design&node-id=0%3A1&mode=design&t=0Nose62vSZgYsUG9-1)
