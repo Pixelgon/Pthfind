@@ -43,7 +43,7 @@
 # Elementy
 - profil se bude skládat z elementů
 	- dlaždice/prvek, kterým se bude moct uživatel představit nebo odlišit
-	- na desktopu/tabletu v gridu 6x*, na mobilu 3x*
+	- na desktopu/tabletu v gridu 6x*, na mobilu 2x*
 - s elementy bude možné pohybovat a některé dokonce roztahovat přes více sloupců/řádků
 - elementy: 
 	- profil: obrázek se jménem
