@@ -10,6 +10,8 @@ export enum PortfolioActionType {
     ADD_ELEMENT,
     REMOVE_ELEMENT,
     MOVE_ELEMENT,
+    EDIT_ELEMENT,
+    CHANGE_COLOR,
 }
 
 export interface AddElementAction {
@@ -27,7 +29,19 @@ export interface MoveElementAction {
     payload: { elementId: string; newIndex: number };
 }
 
+export interface EditElementAction {
+    type: PortfolioActionType.EDIT_ELEMENT;
+    payload: Element;
+}
+
+export interface ChangeColorAction {
+    type: PortfolioActionType.CHANGE_COLOR;
+    payload: { color: string };
+}
+
 export type PortfolioAction =
     | AddElementAction
     | RemoveElementAction
-    | MoveElementAction;
+    | MoveElementAction
+    | EditElementAction
+    | ChangeColorAction;
