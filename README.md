@@ -3,7 +3,7 @@
 # Myšlenka
 - lidi stále nepřišli na jednoduché generické řešení CV/vizitek a vetšinou si to kuchtí sami ve Wordu nebo jsou na Linkedinu, který stejně nikoho moc nezajímá
 - hojně se stává, že mají lidi CV přesycené "omáčkou" a fakta se hůře hledají, HR z toho šílí
-- stále si lidi předávají vizitky nebo dávají link na Instagram nebo Linkedin, tohle by mohl být takový minimalistický rozcestník naší digitální identity něco jako Linktree, ale více profi a mířený spíše předtavení člověka v jeho nejlepším světle
+- stále si lidi předávají vizitky nebo dávají link na Instagram nebo Linkedin, tohle by mohl být takový minimalistický rozcestník digitální identity něco jako Linktree, ale účelem více mířený na představení člověka v jeho nejlepším světle
 - rozcestník tvého digi života
 - \= Minimalistický hostovaný profil
 - nový uživatel se dostane na síť, jen pokud dostane od uživatele jeho portfolio/profil
@@ -12,7 +12,6 @@
 - představit se co nejefektivněji v pár větách
 - osobní hodnoty
 - lidi zajímá, jaké máš zkušenosti, ale více je zajímá co si dokázal
-- neslibuj čiň
 - jak by si se představil na první schůzce?
 - lidi budu dopředu vědět co od tebe čekat, to ušetři čas a nepříjemnosti
 - export max do VCARD ne do pdf, profil zůstane na stránkách
@@ -52,7 +51,6 @@
 	- iFrame: dlaždice s vybranou stránkou
 	- galerie: swiper s photoswipe, do kterém bude možné přidat do 8 videí nebo obrázků
 	- odkaz: samostatný blok s odkazem na sociální síť
-	- mapa
 # Nástroje pro tvorbu
 - Frontend:
 	- React.ts
