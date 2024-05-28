@@ -32,6 +32,8 @@ export interface Element {
     type: ElementType;
     minSize: ElementSize;
     maxSize: ElementSize;
+    required?: boolean;
+    maxN?: number;
 }
 
 export interface ProfileElement extends Element {
@@ -40,6 +42,8 @@ export interface ProfileElement extends Element {
     name: string;
     minSize: { cols: 2, rows: 2 };
     maxSize: { cols: 3, rows: 3 };
+    required: true;
+    maxN: 1;
 }
 
 export interface ContactElement extends Element {
@@ -62,6 +66,7 @@ export interface WebElement extends Element {
     url: string;
     minSize: { cols: 2, rows: 2 };
     maxSize: { cols: 6, rows: 6 };
+    maxN: 2;
 }
 
 export interface GalleryElement extends Element {

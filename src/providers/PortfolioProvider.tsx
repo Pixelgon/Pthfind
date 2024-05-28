@@ -4,8 +4,8 @@ import { PortfolioReducer } from "../reducers/PortfolioReducer";
 
 const PortfolioInit: Portfolio = {
     id: "1",
-    background: "#fff",
-    primaryColor: "#000",
+    background: "#1E1E1E",
+    primaryColor: "#00CCFF",
     locked: true,
     elements: [],
 };
