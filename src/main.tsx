@@ -9,7 +9,7 @@ import "@fontsource/open-sans";
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <PortfolioProvider>
-    <App />   
+      <App />   
     </PortfolioProvider>
   </React.StrictMode>,
 )

@@ -10,10 +10,10 @@ const PortfolioInit: Portfolio = {
     elements: [],
 };
 
-export const PortfolioContext = createContext<[Portfolio, Dispatch<PortfolioAction>]>([PortfolioInit, () => {}]);
+export const PortfolioContext = createContext<{ data: Portfolio, dispatch: Dispatch<PortfolioAction> }>({ data: PortfolioInit, dispatch: () => {} });
 
 export const PortfolioProvider: FC<PropsWithChildren> = ({ children }) => {
-    const reducer = useReducer(PortfolioReducer, PortfolioInit);
+    const [data, dispatch] = useReducer(PortfolioReducer, PortfolioInit);
   
-    return <PortfolioContext.Provider value={reducer}>{children}</PortfolioContext.Provider>;
+    return <PortfolioContext.Provider value={{ data, dispatch }}>{children}</PortfolioContext.Provider>;
 };

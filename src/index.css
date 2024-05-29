@@ -1,3 +1,11 @@
+:root { 
+  --elementBg: rgba(46,51,56,0.8);
+  --icoActive: #2E3338;
+  --elementBg--sec: rgba(64,73,82,0.8);
+  --trans: 0.3s ease;
+}
+
+
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
