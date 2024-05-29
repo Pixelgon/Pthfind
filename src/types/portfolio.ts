@@ -16,6 +16,7 @@ export enum PortfolioActionType {
     EDIT_ELEMENT,
     CHANGE_COLOR,
     CHANGE_BACKGROUND,
+    TOGGLE_LOCK
 }
 
 export interface AddElementAction {
@@ -53,6 +54,10 @@ export interface ChangeBackgroundAction {
     payload: { background: string };
 }
 
+export interface ToggleLockAction {
+    type: PortfolioActionType.TOGGLE_LOCK;
+}
+
 export type PortfolioAction =
     | AddElementAction
     | RemoveElementAction
@@ -60,4 +65,5 @@ export type PortfolioAction =
     | ResizeElementAction
     | EditElementAction
     | ChangeColorAction
-    | ChangeBackgroundAction;
+    | ChangeBackgroundAction
+    | ToggleLockAction;

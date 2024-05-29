@@ -1,22 +1,24 @@
-import { act } from "react-dom/test-utils";
 import Button from "./Button";
 import { LockClosedIcon, LockOpenIcon } from '@heroicons/react/24/solid'
-import { useState } from "react";
+import { useContext } from "react";
+import { PortfolioContext } from "../providers/PortfolioProvider";
+import { PortfolioActionType } from "../types/portfolio";
 
 
 
 export const PortfolioMenu = () => {
-    const [active, setActive] = useState(false);
+    const portfolio = useContext(PortfolioContext);
+
 
     const toggleLock = () => {
-        setActive(!active);
-        console.log(active);
+        portfolio.dispatch({ type: PortfolioActionType.TOGGLE_LOCK });
+        console.log(portfolio.data.locked);
     };
 
     return (
         <>
-            <Button onClick={() => toggleLock()} active={active}>
-                  {active ? <LockClosedIcon /> : <LockOpenIcon />}
+            <Button onClick={() => toggleLock()} active={portfolio.data.locked}>
+                  {portfolio.data.locked ? <LockClosedIcon /> : <LockOpenIcon />}
             </Button>
         </>
     );

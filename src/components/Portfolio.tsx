@@ -3,6 +3,9 @@ import { useContext } from "react";
 import { PortfolioContext } from "../providers/PortfolioProvider";
 import { PortfolioMenu } from "./PortfolioMenu";
 
+
+
+
 export const Portfolio = () => {
     
     const portfolioData = useContext(PortfolioContext);

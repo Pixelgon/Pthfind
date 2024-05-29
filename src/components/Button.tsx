@@ -1,13 +1,11 @@
-import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { PortfolioContext } from '../providers/PortfolioProvider';
 
 interface ButtonProps {
   onClick: () => void;
   children: React.ReactNode;
   active?: boolean;
 }
-const StyledButton = styled.button`
+const StyledButton = styled.a`
             max-height: 36px;
             padding: 18px;
             height: 100%;
@@ -23,11 +21,15 @@ const StyledButton = styled.button`
             &:hover {
                 background-color: var(--elementBg--sec);
             }
+
+            &.active {
+                color: green;
+            }
 `;
 
-const Button: React.FC<ButtonProps> = ({ children, onClick }) => {
+const Button: React.FC<ButtonProps> = ({ children, onClick, active }) => {
       return (
-    <StyledButton onClick={onClick}  >
+    <StyledButton onClick={onClick} className={ active ? "active" : ""}>
       {children}
     </StyledButton>
   );
