@@ -1,11 +1,11 @@
-import { Portfolio } from './components/Portfolio'
+import { Persona } from "./components/Persona"
 
 function App() {
 
 
   return (
     <>
-      <Portfolio />      
+      <Persona />      
     </>
   )
 }

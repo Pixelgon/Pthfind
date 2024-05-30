@@ -1,14 +1,14 @@
 import { ElementSize } from "./elements";
 
-export interface Portfolio {
+export interface Persona {
     id: string;
     background: string;
     primaryColor: string;
-    locked: boolean;
+    editMode: boolean;
     elements: Element[];
 }
 
-export enum PortfolioActionType {
+export enum PersonaActionType {
     ADD_ELEMENT,
     REMOVE_ELEMENT,
     MOVE_ELEMENT,
@@ -20,45 +20,45 @@ export enum PortfolioActionType {
 }
 
 export interface AddElementAction {
-    type: PortfolioActionType.ADD_ELEMENT;
+    type: PersonaActionType.ADD_ELEMENT;
     payload: Element;
 }
 
 export interface RemoveElementAction {
-    type: PortfolioActionType.REMOVE_ELEMENT;
+    type: PersonaActionType.REMOVE_ELEMENT;
     payload: { elementId: string };
 }
 
 export interface MoveElementAction {
-    type: PortfolioActionType.MOVE_ELEMENT;
+    type: PersonaActionType.MOVE_ELEMENT;
     payload: { elementId: string; newIndex: number };
 }
 
 export interface ResizeElementAction {
-    type: PortfolioActionType.RESIZE_ELEMENT;
+    type: PersonaActionType.RESIZE_ELEMENT;
     payload: { elementId: string; newSize: ElementSize };
 }
 
 export interface EditElementAction {
-    type: PortfolioActionType.EDIT_ELEMENT;
+    type: PersonaActionType.EDIT_ELEMENT;
     payload: { elementId: string; changes: Partial<Element> };
 }
 
 export interface ChangeColorAction {
-    type: PortfolioActionType.CHANGE_COLOR;
+    type: PersonaActionType.CHANGE_COLOR;
     payload: { color: string };
 }
 
 export interface ChangeBackgroundAction {
-    type: PortfolioActionType.CHANGE_BACKGROUND;
+    type: PersonaActionType.CHANGE_BACKGROUND;
     payload: { background: string };
 }
 
 export interface ToggleLockAction {
-    type: PortfolioActionType.TOGGLE_LOCK;
+    type: PersonaActionType.TOGGLE_LOCK;
 }
 
-export type PortfolioAction =
+export type PersonaAction =
     | AddElementAction
     | RemoveElementAction
     | MoveElementAction

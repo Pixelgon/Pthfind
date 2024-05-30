@@ -6,7 +6,7 @@
 - stále si lidi předávají vizitky nebo dávají link na Instagram nebo Linkedin, tohle by mohl být takový minimalistický rozcestník digitální identity něco jako Linktree, ale účelem více mířený na představení člověka v jeho nejlepším světle
 - rozcestník tvého digi života
 - \= Minimalistický hostovaný profil
-- nový uživatel se dostane na síť, jen pokud dostane od uživatele jeho portfolio/profil
+- nový uživatel se dostane na síť, jen pokud dostane od uživatele jeho persona/profil
 - nenahradí způsob jak si najít práci
 - sebeprezentace sebe jako osobu, produkt, společnost
 - představit se co nejefektivněji v pár větách
