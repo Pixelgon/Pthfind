@@ -4,13 +4,13 @@ import { PersonaContext } from "../providers/PersonaProvider";
 import { PersonaMenu } from "./PersonaMenu";
 
 interface StyledPersonaProps {
-  background: string;
-  primaryColor: string;
+  $background: string;
+  $primarycolor: string;
 }
 
 const StyledPersona = styled.main<StyledPersonaProps>`
-  background-color: ${(props) => props.background};
-  color: ${(props) => props.primaryColor};
+  background-color: ${(props) => props.$background};
+  color: ${(props) => props.$primarycolor};
   height: calc(100vh - 40px);
   width: calc(100vw - 40px);
   display: flex;
@@ -32,8 +32,8 @@ export const Persona = () => {
   return (
     <>
       <StyledPersona
-        background={personaData.data.background}
-        primaryColor={personaData.data.primaryColor}
+        $background={personaData.data.background}
+        $primarycolor={personaData.data.primaryColor}
       >
         <StyledHeader>Persona</StyledHeader>
         <PersonaMenu />
