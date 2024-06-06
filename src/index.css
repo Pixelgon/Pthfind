@@ -4,6 +4,7 @@
   --icoActive: #2E3338;
   --elementBg--sec: rgba(64,73,82,0.8);
   --trans: 0.3s ease;
+  --blur: blur(15px);
 }
 
 

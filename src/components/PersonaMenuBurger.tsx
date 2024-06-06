@@ -9,6 +9,7 @@ export type PersonaMenuBurgerProps = {
 
 interface StyledPersonaMenuBurgerProps {
     $isOpen: boolean,
+    $NItems: number,
 }
 
 const StyledPersonaMenuBurgerItems = styled.ul<StyledPersonaMenuBurgerProps>`
@@ -17,36 +18,55 @@ const StyledPersonaMenuBurgerItems = styled.ul<StyledPersonaMenuBurgerProps>`
     list-style: none;
     padding: 0;
     margin: 0;
-    max-height: ${({ $isOpen }) => $isOpen ? '144px' : '0'};
+    max-height: ${({ $isOpen, $NItems }) => $isOpen ? 72*$NItems+'px' : '0'};
     overflow: hidden;
     background-color: var(--elementBg--sec);
-    border-radius: 18px;
-    transition: max-height 0.3s ease;
-`;
+    backdrop-filter: var(--blur);
+    border-radius: ${({ $isOpen }) => $isOpen ? '18px' : '0'};
+    transition: all 0.3s ease;
+    height: 100%;
 
-const StyledPersonaMenuBurger = styled.li<StyledPersonaMenuBurgerProps>`
+    @media (min-width: 768px) {
+        max-height: none;
+        flex-direction: row;
+        border-radius: 18px;
+    }
+    `;
+
+
+const StyledPersonaMenuBurger = styled.li`
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: 10px;
+    height: 100%;
 
-    &:hover ${StyledPersonaMenuBurgerItems} {
-        max-height: ${({ $isOpen }) => $isOpen ? '0' : '144px'};
+    @media and (min-width: 768px) {
+        width: 0;
     }
-
 `;
 
+
+const StyledButton = styled.div`
+    @media (min-width: 768px) {
+        display: none;  
+    }
+`;
+
+
+
+
 export const PersonaMenuBurger: React.FC<PersonaMenuBurgerProps> = ({ color }) => {
-    const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+    const [isMenuOpen, setIsMenuOpen] = React.useState(window.innerWidth > 768 ? true : false);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
-    }
+    }   
 
     return (
         <StyledPersonaMenuBurger>
-            <StyledPersonaMenuBurgerItems $isOpen={isMenuOpen}>
+            <StyledPersonaMenuBurgerItems $isOpen={isMenuOpen} $NItems={2}>
                 <li>
                     <Button onClick={() => console.log("Menu item 1")} color={color} nobg>
                         <ShareIcon />
@@ -57,10 +77,18 @@ export const PersonaMenuBurger: React.FC<PersonaMenuBurgerProps> = ({ color }) =
                         <UserPlusIcon />
                     </Button>
                 </li>
+                <li>
+                    <Button onClick={() => console.log("Menu item 2")} color={color} nobg>
+                        <UserPlusIcon />
+                    </Button>
+                </li>
             </StyledPersonaMenuBurgerItems>
-            <Button onClick={toggleMenu} color={color}>
-                {isMenuOpen ? <XMarkIcon /> : <Bars3Icon />}
-            </Button>
+            <StyledButton>
+                <Button onClick={toggleMenu} color={color}>
+                    {isMenuOpen ? <XMarkIcon /> : <Bars3Icon />}
+                </Button>    
+            </StyledButton>
         </StyledPersonaMenuBurger>
     );
 }
+

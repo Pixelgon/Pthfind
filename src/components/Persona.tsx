@@ -18,6 +18,7 @@ const StyledPersona = styled.main<StyledPersonaProps>`
   align-items: center;
   flex-direction: column;
   padding: 20px;
+
 `;
 
 const StyledHeader = styled.h1`

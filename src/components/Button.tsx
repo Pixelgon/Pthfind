@@ -14,9 +14,8 @@ interface StyledButtonProps {
   $nobg?: boolean;
 }
 
-const StyledButton = styled.a<StyledButtonProps>`
-  height: 72px;
-  aspect-ratio: 1;
+export const StyledButton = styled.a<StyledButtonProps>`
+  padding: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,10 +25,12 @@ const StyledButton = styled.a<StyledButtonProps>`
   cursor: pointer;
   transition: all var(--trans);
   margin-bottom: auto;
+  backdrop-filter: ${({ $nobg }) => $nobg ? 'none' : 'blur(10px)'};
 
   svg {
     transition: scale var(--trans);
-    padding: 18px;
+    height: 36px;
+    aspect-ratio: 1;
   }
 
   &:hover {
