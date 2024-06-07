@@ -9,7 +9,8 @@ interface StyledPersonaProps {
 }
 
 const StyledPersona = styled.main<StyledPersonaProps>`
-  background-color: ${(props) => props.$background};
+  background: url("${(props) => props.$background}") center no-repeat;
+  background-size: cover;
   color: ${(props) => props.$primarycolor};
   height: calc(100vh - 40px);
   width: calc(100vw - 40px);
@@ -18,7 +19,6 @@ const StyledPersona = styled.main<StyledPersonaProps>`
   align-items: center;
   flex-direction: column;
   padding: 20px;
-
 `;
 
 const StyledHeader = styled.h1`

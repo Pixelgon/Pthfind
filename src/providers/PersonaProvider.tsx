@@ -2,9 +2,11 @@ import { Dispatch, FC, PropsWithChildren, createContext, useReducer } from "reac
 import { PersonaReducer } from "../reducers/PersonaReducer";
 import { Persona, PersonaAction } from "../types/persona";
 
+
+
 const PersonaInit: Persona = {
     id: "1",
-    background: "#1E1E1E",
+    background: "/background.jpg",
     primaryColor: "#00CCFF",
     editMode: false,
     elements: [],

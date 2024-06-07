@@ -46,7 +46,7 @@ export const PersonaMenu = () => {
                         {persona.data.editMode ? <LockOpenIcon /> : <LockClosedIcon /> }
                     </Button>    
                 </li>
-                <PersonaMenuBurger color={persona.data.primaryColor}/>
+                <PersonaMenuBurger color={persona.data.primaryColor} isLocked={persona.data.editMode} />
             </StyledPersonaMenu>
         </>
     );

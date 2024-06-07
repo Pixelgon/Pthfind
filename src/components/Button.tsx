@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-interface ButtonProps {
+export interface ButtonProps {
   onClick: () => void;
   children: React.ReactNode;
   active?: boolean; 
