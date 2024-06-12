@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { useContext } from "react";
-import { PersonaContext } from "../providers/PersonaProvider";
-import { PersonaMenu } from "./PersonaMenu";
+import { PersonaContext } from "../../providers/PersonaProvider";
+import { Menu } from "../Persona/Menu";
+import Elements from "../Persona/Elements";
 
 interface StyledPersonaProps {
   $background: string;
@@ -21,10 +22,6 @@ const StyledPersona = styled.main<StyledPersonaProps>`
   padding: 20px;
 `;
 
-const StyledHeader = styled.h1`
-  flex-grow: 1;
-`;
-
 
 
 export const Persona = () => {
@@ -36,8 +33,8 @@ export const Persona = () => {
         $background={personaData.data.background}
         $primarycolor={personaData.data.primaryColor}
       >
-        <StyledHeader>Persona</StyledHeader>
-        <PersonaMenu />
+        <Elements/>
+        <Menu />
       </StyledPersona>
     </>
   );

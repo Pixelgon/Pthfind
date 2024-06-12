@@ -4,7 +4,6 @@ export interface Persona {
     id: string;
     background: string;
     primaryColor: string;
-    editMode: boolean;
     elements: Element[];
 }
 

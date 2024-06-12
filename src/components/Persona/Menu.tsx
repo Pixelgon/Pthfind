@@ -1,14 +1,15 @@
-import Button from "./Button";
+import Button from "../Common/Button";
 import { LockClosedIcon, LockOpenIcon } from '@heroicons/react/24/solid'
 import { useContext } from "react";
-import { PersonaContext } from "../providers/PersonaProvider";
-import { PersonaActionType } from "../types/persona";
+import { PersonaContext } from "../../providers/PersonaProvider";
+import { PersonaActionType } from "../../types/persona";
 import styled from "styled-components";
 import { ArrowLeftIcon } from "@heroicons/react/16/solid";
-import { PersonaMenuBurger } from "./PersonaMenuBurger";
+import { MenuBurger } from "./MenuBurger";
+import { useNavigate } from "react-router-dom";
 
 
-const StyledPersonaMenu = styled.menu`
+const StyledMenu = styled.menu`
     display: flex;
     gap: 10px;
     position: relative;
@@ -23,9 +24,9 @@ const StyledPersonaMenu = styled.menu`
     `;
 
 
-
-export const PersonaMenu = () => {
+export const Menu = () => {
     const persona = useContext(PersonaContext);
+    const navigate = useNavigate();
 
 
     const toggleLock = () => {
@@ -35,9 +36,9 @@ export const PersonaMenu = () => {
 
     return (
         <>
-            <StyledPersonaMenu>
+            <StyledMenu>
                 <li>
-                    <Button onClick={() => console.log("Back to home")} color={persona.data.primaryColor}>
+                    <Button onClick={() => navigate('/')} color={persona.data.primaryColor}>
                         <ArrowLeftIcon />
                     </Button>
                 </li>
@@ -46,8 +47,8 @@ export const PersonaMenu = () => {
                         {persona.data.editMode ? <LockOpenIcon /> : <LockClosedIcon /> }
                     </Button>    
                 </li>
-                <PersonaMenuBurger color={persona.data.primaryColor} isLocked={persona.data.editMode} />
-            </StyledPersonaMenu>
+                <MenuBurger color={persona.data.primaryColor} isLocked={persona.data.editMode} />
+            </StyledMenu>
         </>
     );
 };
