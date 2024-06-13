@@ -6,7 +6,7 @@ import { PersonaActionType } from "../../types/persona";
 import styled from "styled-components";
 import { ArrowLeftIcon } from "@heroicons/react/16/solid";
 import { MenuBurger } from "./MenuBurger";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 
 const StyledMenu = styled.menu`
@@ -27,10 +27,12 @@ const StyledMenu = styled.menu`
 export const Menu = () => {
     const persona = useContext(PersonaContext);
     const navigate = useNavigate();
+    const location = useLocation();
+    const isEditMode = location.pathname.endsWith('/edit');
 
 
     const toggleLock = () => {
-        persona.dispatch({ type: PersonaActionType.TOGGLE_LOCK });
+        navigate(isEditMode ? location.pathname.replace('/edit', '') : location.pathname + '/edit');
     };
 
 
@@ -43,11 +45,11 @@ export const Menu = () => {
                     </Button>
                 </li>
                 <li>
-                    <Button onClick={() => toggleLock()} active={persona.data.editMode} color={persona.data.primaryColor}>
-                        {persona.data.editMode ? <LockOpenIcon /> : <LockClosedIcon /> }
+                    <Button onClick={() => toggleLock()} active={isEditMode} color={persona.data.primaryColor}>
+                        {isEditMode ? <LockOpenIcon /> : <LockClosedIcon /> }
                     </Button>    
                 </li>
-                <MenuBurger color={persona.data.primaryColor} isLocked={persona.data.editMode} />
+                <MenuBurger color={persona.data.primaryColor} isLocked={isEditMode} />
             </StyledMenu>
         </>
     );

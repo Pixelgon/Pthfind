@@ -70,7 +70,6 @@ const StyledMenuBurgerItems = styled.ul<StyledMenuBurgerProps>`
 
     > li { 
      ${props => props.$isOpen ? 'animation: growHeight .5s ease;' : ''}
-     max-height: ${props => props.$isOpen ? '63px' : '0'};
      transition: all .5s ease;
     }
 
@@ -92,7 +91,7 @@ const StyledMenuBurgerItems = styled.ul<StyledMenuBurgerProps>`
         flex-direction: row;
         border-radius: 18px;
         right: unset;
-        left: calc(100% + 10px);
+        left: 100%;
         top: unset;
         bottom: 0;
         height: 100%;
@@ -114,7 +113,7 @@ const StyledMenuBurgerItems = styled.ul<StyledMenuBurgerProps>`
 
         > li {
             animation: growWidht .5s ease;
-            }
+        }
     }
 
 

@@ -53,9 +53,6 @@ export interface ChangeBackgroundAction {
     payload: { background: string };
 }
 
-export interface ToggleLockAction {
-    type: PersonaActionType.TOGGLE_LOCK;
-}
 
 export type PersonaAction =
     | AddElementAction
@@ -64,5 +61,4 @@ export type PersonaAction =
     | ResizeElementAction
     | EditElementAction
     | ChangeColorAction
-    | ChangeBackgroundAction
-    | ToggleLockAction;
+    | ChangeBackgroundAction;

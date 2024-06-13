@@ -16,13 +16,17 @@ const router = createBrowserRouter([
     path: '/persona/:id',
     element: <Persona />,
   },
+  {
+    path: '/persona/:id/edit',
+    element: <Persona />,
+  },
 ]);
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <PersonaProvider>
-      <RouterProvider router={router} />
+        <RouterProvider router={router} />
     </PersonaProvider>
   </React.StrictMode>,
 )
