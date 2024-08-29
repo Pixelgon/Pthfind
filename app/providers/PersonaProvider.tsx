@@ -8,7 +8,6 @@ const PersonaInit: Persona = {
     id: "1",
     background: "/background.jpg",
     primaryColor: "#00CCFF",
-    editMode: false,
     elements: [],
 };
 
